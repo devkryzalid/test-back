@@ -2,14 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use App\Models\Event;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class EventController extends Controller
 {
     public function index(Request $request)
     {
-        $events = Event::all();
+        $events = DB::select("SELECT * FROM events");
 
         return view('pages.events', ['events' => $events]);
     }
