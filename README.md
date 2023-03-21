@@ -28,7 +28,7 @@ Ce qui est demandé est de modifier l'affichage existant afin d'incorporer le sy
 
 ### Plus précisément
 
-Modifie la requete `SELECT` du controller `EventController` afin d'afficher tous les évènements ordonné date de début (`start_date`) croissante puis retourner uniquement les éléments à venir ou en cours.
+Modifie la requete `DB::select()` du controller `EventController` afin d'afficher tous les évènements ordonné date de début (`start_date`) croissante puis retourner uniquement les éléments à venir ou en cours.
 
 Ajouter un objet "Réservation" dans une table `orders` (courriel du contact, le nom et prénom, la quantité de place à réserver, l'évènement à réserver et le prix total)
 
@@ -36,7 +36,7 @@ Pour ajouer une réservation, créer un point API REST avec les paramètres et v
 
 Une fois des réservations enregistrer, ajouter dans la liste des évènements, pour chaque éléments, le nombre de participant total.
 
-Ajouter un systeme d'authentification simple avec inscription. Cette authentification sera utiles pour afficher ou cacher des éléments aux visiteurs.
+Ajouter un systeme d'authentification simple avec inscription (package, custom, à la mano, au choix). Cette authentification sera utiles pour afficher ou cacher des éléments aux visiteurs.
 
 Ajouter au détail d'un évènement pour les utilisateur authentifié, dans un tableau ou une liste (voir bootstrap 5 déjà en place), toutes les réservations actuelle (le participant, le nombre de places vendus pour cet réservation et la somme de la vente)
 
